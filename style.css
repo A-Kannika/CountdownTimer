@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-image: url("img/bg3.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon {
+  position: relative;
+  overflow: hidden;
+  filter: brightness(200%);
+}
+
+.text {
+  background-color: black;
+  color: white;
+  font-size: 5rem;
+  margin-top: -20rem;
+  margin-bottom: -20rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  user-select: none;
+}
+
+.text::before {
+  content: attr(data-text);
+  position: absolute;
+  color: white;
+  filter: blur(0.02em);
+  mix-blend-mode: difference;
+}
+
+.gradient {
+  position: absolute;
+  background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: multiply;
+}
+
+.spotlight {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, white, transparent 25%) center / 25% 25%,
+    radial-gradient(circle, white, black 25%) center / 12.5% 12.5%;
+  animation: light 5s linear infinite;
+  mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+  to {
+    transform: translate(50%, 50%);
+  }
+}
+
+/* h1 {
+  font-size: 5rem;
+  margin-top: -10rem;
+  -webkit-animation: ani 10s infinite alternate;
+  animation: ani 10s infinite alternate;
+  -moz-animation: ani 10s infinite alternate;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+@keyframes ani {
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: blue;
+  }
+  75% {
+    color: plum;
+  }
+  100% {
+    color: green;
+  }
+} */
+
+.countdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.big-text {
+  font-weight: 500;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+}
+
+.countdown-el {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.countdown-el span {
+  font-weight: 600;
+  font-size: 2rem;
+}
