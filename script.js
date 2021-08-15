@@ -17,10 +17,10 @@ function countdown(){
         const mins = Math.floor(totalSeconds / 60) % 60;
         const seconds = Math.floor(totalSeconds) % 60;
 
-        daysEL.innerHTML = days;
-        hoursEL.innerHTML = hours;
-        minsEL.innerHTML = mins;
-        secondsEL.innerHTML = seconds;
+        daysEL.innerHTML = formatTime(days);
+        hoursEL.innerHTML = formatTime(hours);
+        minsEL.innerHTML = formatTime(mins);
+        secondsEL.innerHTML = formatTime(seconds);
 }
 
 function formatTime(time){
